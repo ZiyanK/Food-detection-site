@@ -1,9 +1,9 @@
 import React from 'react';
 
-const ImageDisplay = ({imageURL}) => {
+const ImageDisplay = ({imageUrl}) => {
     return(
         <div className='center'>
-            <img src={imageURL} alt=''/>
+            <img src={imageUrl} alt='' style={{'height':' 200px'}}/>
         </div>
     );
 }

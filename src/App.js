@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 import './App.css';
-import Particles from 'react-particles-js';
+// import Particles from 'react-particles-js';
 import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm';
 import Clarifai from 'clarifai';
 import ImageDisplay from './components/ImageDisplay/ImageDisplay';
@@ -26,17 +26,17 @@ const app = new Clarifai.App({
   apiKey: '4329822d12914ec9b67e15243084cbd0'
 });
 
-const Particleoptions = {
-  particles: {
-    number: {
-      value: 75,
-      density: {
-        enable: true, 
-        value_area: 1000
-      }
-    }
-  }
-}
+// const Particleoptions = {
+//   particles: {
+//     number: {
+//       value: 75,
+//       density: {
+//         enable: true, 
+//         value_area: 1000
+//       }
+//     }
+//   }
+// }
 
 let itemsToShow = [];
 
@@ -84,7 +84,6 @@ class App extends Component {
       <div className='Container'>
         <ImageLinkForm onInputChange={this.onInputChange} onButtonSubmit={this.onButtonSubmit} />
         <ImageDisplay imageUrl={this.state.imageUrl} />
-        <h1> {this.state.item1} </h1>
         <FoodItem itemsToShow = {itemsToShow} />
         {itemsToShow=[]}
       </div>
